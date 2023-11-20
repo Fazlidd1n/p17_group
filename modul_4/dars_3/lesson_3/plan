@@ -1,0 +1,22 @@
+relation types
+
+one to one
+one to many
+many to one
+many to many
+
+
+
+Passport and Person -> one to one
+
+
+Author and Books -> many to many
+
+
+Student and StudentID -> one to one
+
+
+Actors and Movies -> many to many
+
+
+python + postgresql

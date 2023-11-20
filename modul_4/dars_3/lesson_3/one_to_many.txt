@@ -1,0 +1,88 @@
+Author and Books:
+
+author
+AuthorID	FirstName	LastName	Birthdate
+
+book
+BookID	Title	PublicationYear	AuthorID
+----------------------------------------------------------------
+
+Parent and Children:
+
+parent
+ParentID	FirstName	LastName
+
+children
+ChildID	FirstName	LastName	ParentID
+----------------------------------------------------------------
+
+Department and Employees:
+
+department
+DepartmentID	DepartmentName	Location
+
+employees
+EmployeeID	FirstName	LastName	DepartmentID
+-----------------------------------------------------------------
+
+
+Customer and Orders:
+
+customer
+CustomerID	FirstName	LastName	Email
+
+orders
+OrderID	OrderDate	CustomerID	TotalAmount
+
+-------------------------------------------------------------------
+
+
+Country and Cities:
+
+country
+CountryID	CountryName	Population
+
+cities
+CityID	CityName	Population	CountryID
+-------------------------------------------------------------------
+
+University and Courses:
+
+university
+UniversityID	UniversityName	Location
+
+courses
+CourseID	CourseName	UniversityID	Instructor
+
+--------------------------------------------------------------------
+
+
+Artist and Songs:
+
+Blog and Posts:
+
+Manufacturer and Products:
+
+Project and Tasks:
+
+
+Customer and Customer Orders:
+
+Doctor and Patient Appointments:
+
+Manufacturer and Parts:
+
+Supplier and Products Supplied:
+
+Teacher and Students:
+
+Category and Products:
+
+Country and Provinces/States:
+
+Author and Published Articles:
+
+Hotel and Room Reservations:
+
+Customer and Support Tickets:
+

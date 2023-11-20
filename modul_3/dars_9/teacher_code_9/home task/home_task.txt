@@ -1,0 +1,36 @@
+1)# enum
+DayOfWeek
+UserRole - QILINMADI !
+Color
+PizzaSize
+HTTPStatus
+Gender
+Coin - QILINMADI !
+FileType
+PaymentMethod - QILINMADI !
+Language
+MusicGenre
+ComputerComponent - QILINMADI !
+
+
+
+2)berilgan 2 ta rasmni -> DTO
+
+3)algo -> matrix(130-147)
+
+4)leetcode -> matrix(10ta)
+5)leetcode -> string(25 ta)
+5)leetcode -> array(25 ta)
+
+6) BALLI sistema(project)
+
+
+
+
+
+
+
+
+
+
+

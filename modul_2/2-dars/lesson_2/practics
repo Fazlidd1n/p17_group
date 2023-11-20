@@ -1,0 +1,52 @@
+""""""
+
+# 0
+"""
+BatteryPowered : battery_type , power_source()
+PlugPowered : voltage , power_source()
+HybridDevice : name , battery_type , voltage , power_source()
+
+
+# 1
+"""
+Person : name , age , introduce()
+Customer : name , age , customer_id , purchase()
+Manager : name , age , department , salary , manage() , display_salary()
+Developer : name , age , programming_language , code()
+"""
+
+# 2
+"""
+ZooAnimal : name , species
+FlyingAnimal : name , species , fly()
+SwimmingAnimal : name , species , swim()
+Bird : name , species , fly() ,  make_sound()
+Fish : name , species , swim() ,  make_sound()
+Duck : name , species , swim() , fly() , make_sound()
+"""
+ZooAnimal
+FlyingAnimal(ZooAnimal)
+....
+
+# 3
+"""
+Shape: name , display_info() , area()
+Rectangle: name ,display_info() , width , height , area()
+Square: name ,display_info() , width , height , area()
+Circle : name , display_info() , radius , area()
+"""
+
+# 4
+"""
+Vehicle : brand , model , display_info()
+Car : brand , model , display_info() , fuel_type , display_car_info()
+ElectricCar : brand , model , display_info() ,  battery_capacity , display_battery_info()
+"""
+
+# 5
+"""
+LibraryItem: title , author , display_info()
+Book : title , author , genre , display_info() , display_genre()
+AudioBook: title , author ,genre ,  narrator ,display_info() , display_genre(), display_narrator()
+"""
+

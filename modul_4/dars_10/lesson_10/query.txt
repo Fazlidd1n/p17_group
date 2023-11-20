@@ -1,0 +1,138 @@
+--
+--
+-- set timezone = 'Asia/Tashkent';
+--
+-- -- -----------------------------------------------------
+-- create table delete_category_log(
+--     id serial primary key ,
+--     category_id integer,
+--     name varchar(255),
+--     delete_date timestamp default current_timestamp
+-- );
+--
+-- -- -----------------------------------------------------
+-- create function category_delete_save()
+-- returns trigger
+-- language plpgsql
+-- as
+--     $$
+--     begin
+--         insert into delete_category_log(category_id, name)
+--         values (NEW.name , OLD.name);
+--     return OLD;
+--     end;
+--     $$;
+--
+--
+-- -- --------------------------------------------------------------
+-- create trigger category_delete_category_log
+-- before delete
+-- on category
+-- for each row
+--     execute function category_delete_save()
+-- ;
+--
+-- -- -------------------------------------------------------
+-- delete from film_category where category_id = 16;
+-- delete from category where category_id = 16;
+-- select * from category;
+-- select * from delete_category_log;
+--
+
+
+
+
+-- ------------------------------------------------------------------------
+-- alter table category add column film_count integer default 0;
+--
+--
+-- create function increment_film_count()
+-- returns trigger
+-- language plpgsql
+-- as
+--     $$
+--         begin
+--             update category set film_count = film_count + 1 where category_id = new.category_id;
+--             return new;
+--         end;
+--     $$;
+-- drop function increment_film_count();
+--
+-- create trigger change_film_count
+--     after insert
+--     on film_category
+--     for each row
+--     execute function increment_film_count();
+--
+-- drop trigger change_film_count on film_category;
+--
+-- insert into film_category(film_id, category_id)
+-- values (9 , 4);
+--
+-- select * from category;
+
+
+-- ------------------------------ hash password -----------------------------------
+
+-- select crypt('1234' , gen_salt('bf'));
+--
+-- select '$2a$06$eFhph4VdB8zwbqcuw.7moOcCqhjNQCShxEgXtKP0WIxZPMfvpdm3a' = crypt('1234', '$2a$06$eFhph4VdB8zwbqcuw.7moOcCqhjNQCShxEgXtKP0WIxZPMfvpdm3a');
+--
+--
+-- create table users(
+--     id serial primary key ,
+--     username varchar(255),
+--     password varchar(255)
+-- );
+--
+--
+-- insert into users(username ,password)
+-- values ('Botirjon' , crypt('1111' , gen_salt('bf')));
+--
+--
+-- select * from users;
+--
+-- select * from users where username = 'Botirjon' and  password= crypt('1111' , password);
+
+
+
+-- Privileges
+
+-- select current_user;
+--
+-- revoke select on all tables in schema public from dilshod;
+-- grant select on all tables in schema public to dilshod;
+--
+-- create role dilshod;
+--
+-- set role postgres;
+-- set role dilshod;
+-- select * from payment;
+-- select * from category;
+
+-- create database test owner postgres;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+task3 - sudo pg_restore -U postgres -p 5432 -h localhost -d exam exam.tar;
+task4 - sudo pg_dump -U postgres -p 5432 -h localhost -W -F t task4 > /Users/macbookpro/Downloads/task4.tar;

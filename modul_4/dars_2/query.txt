@@ -1,0 +1,157 @@
+-- TEACHER CODES !!!
+
+-- primary key - unique , not null , index
+-- serial - integer , autoincrement
+
+
+
+
+--
+-- create table students(
+--     id serial ,
+--     fullname varchar(255),
+--     username varchar(255),
+--     created_at date unique
+-- );
+
+
+
+-- id - primary key
+-- fullname - not null ,
+-- username - unique not null,
+-- created_at - drop unique,
+
+-- alter table students alter column fullname set not null ;
+-- alter table students add column is_active bool unique not null;
+-- alter table students rename constraint students_username_key to nimadir;
+-- alter table students drop constraint nimadir;
+-- alter table students drop constraint students_created_at_key;
+
+
+
+-- create table courses(
+--     id bigserial primary key ,
+--     name varchar(100),
+--     join_at date default current_date,
+-- );
+--
+-- create table students(
+--     id serial primary key ,
+--     fullname varchar(255),
+--     username varchar(255) unique ,
+--     course_id integer constraint students_course_id_fkey references courses(id),
+--     created_at date ,
+--     constraint students_course_id_fkey
+--     foreign key (course_id) references courses(id)
+-- );
+
+-- alter sequence students_id_seq start 1 ;
+
+
+-- create table if not exists products(
+--     id bigserial primary key ,
+--     name varchar(255) not null ,
+--     brand varchar(100) ,
+--     price float4,
+--     gender varchar(100) check ( gender = 'F' or gender = 'M' ),
+--     time_expire date,
+--     join_at timestamp default timezone('Asia/Tashkent' , current_timestamp::timestamptz),
+--     update_at timestamp default timezone('Asia/Tashkent' , current_timestamp::timestamptz)
+-- );
+--
+-- alter table products add constraint price_check check ( price > 0 );
+-- alter table products add constraint time_expire_current_time_check check ( time_expire > timezone('Asia/Tashkent' , current_date::timestamptz));
+
+-- alter table courses alter column join_at set default timezone('Asia/Tashkent' , current_date::timestamptz);
+
+
+-- --------------------------------------- DML -------------------------------------------------------
+
+-- DML - insert , select , update , delete
+
+insert into courses(name)
+values ('C#')
+       returning id;
+
+select c.* from courses c where c.id % 2 = 1;
+select timezone('Asia/Tashkent' ,current_timestamp::timestamptz);
+
+update courses set id = 10 where id = 2;
+
+update courses set join_at = timezone('Asia/Tashkent' ,current_date::timestamptz) where name in ('PHP' , 'python');
+drop table courses;
+alter table students drop constraint students_course_id_fkey;
+
+
+delete from products where brand = 'b' returning *;
+select * from products ;
+
+
+
+
+-- MY CODE!!!
+
+create table if not exists courses(
+    id bigserial primary key ,
+    name varchar(255) unique,
+    join_at date default current_date
+);
+
+create table if not exists students(
+    id serial primary key ,
+    fullname varchar(255),
+    username varchar(255) unique ,
+    course_id integer,
+    created_at date,
+    foreign key (course_id) references courses(id)
+);
+
+-- alter table students add constraint pk  primary key(id);
+-- alter table students alter column fullname set not null ;
+-- alter table students add constraint unq unique (username);
+-- alter table students alter column username set not null ;
+-- alter table students drop constraint students_created_at_key;
+
+
+create table if not exists products (
+    id          bigserial primary key,
+    name        varchar(255) not null,
+    brand       varchar(100),
+    price       float4,
+    gender varchar(100) check ( gender in ('F','M') ),
+    time_expire date,
+    join_at     timestamp default timezone('Asia/Tashkent', current_timestamp::timestamptz),
+    update_at   timestamp default timezone('Asia/Tashkent', current_timestamp::timestamptz)
+);
+alter table products add constraint price_check check ( price > 0 );
+alter table products add constraint time_expire_check check ( time_expire > timezone('Asia/Tashkent', current_timestamp::timestamptz) );
+
+
+alter table courses alter column join_at set default timezone('Asia/Tashkent', current_timestamp::timestamptz)
+
+
+-------------------------------------------D M L-------------------------------------------
+
+insert into courses(name)
+values ('Pyhton'),
+       ('Java'),
+       ('PHP')
+       returning id;
+
+select * from courses where id % 2 = 1;
+
+update courses set join_at = timezone('Asia/Tashkent', current_timestamp::timestamptz) where name in ('PHP','Python');
+
+delete from courses where name='java' returning *;
+
+
+
+
+
+
+
+
+
+
+
+

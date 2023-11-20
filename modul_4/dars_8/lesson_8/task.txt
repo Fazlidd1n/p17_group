@@ -1,0 +1,152 @@
+Mijoz ma'lumotlari uchun view yaratish :
+    "mijoz", "manzil" va "shahar" jadvallaridagi ma'lumotlarni birlashtirgan viewni yaratib, batafsil mijoz ma'lumotlarini ko'rsatish kerak.
+
+
+
+
+
+
+
+
+Film ijarasi uchun view yarating :
+    film nomi, mijoz nomi va barcha ijaraga olingan filmlar uchun ijara sanasini koʻrsatadigan view yarating.
+
+
+
+
+
+
+
+
+
+
+
+Muddati o'tgan ijaralar uchun view yarating :
+    film nomi, mijoz nomi va to'lov sanasi , mudat sanasi ro'yxatini yarating.
+
+
+
+
+
+
+
+
+
+
+Umumiy ijara daromadi uchun view yaratish :
+    Film nomi boʻyicha guruhlash va ijara toʻlovlarini oʻz ichiga olgan holda
+    film ijarasidan olingan jami daromadni hisoblaydigan viewni ishlab chiqing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Film toifalari uchun view yaratish :
+    Har bir turkumdagi filmlar soni bilan birga film toifalarini koʻrsatadigan view yarating.
+
+
+
+
+
+
+
+
+
+
+
+
+Filmlar inventarizatsiyasi uchun view yarating :
+    film nomi va miqdorini oʻz ichiga olgan holda inventardagi mavjud
+    film nusxalari haqida maʼlumot beruvchi viewni yarating.
+
+
+
+
+
+
+
+
+Mijoz tranzaksiyalari uchun view yaratish :
+    Mijozlarning ismlari, mijozlar tranzaktsiyalarini summalari bilan   viewni ishlab chiqish.
+
+
+
+
+
+
+
+Mashhur aktyorlar uchun view yaratish :
+    Ommabop aktyorlar roʻyxatini ular suratga tushgan filmlar soniga qarab tuzadigan view yarating.
+
+
+
+
+
+
+
+
+
+Ijara statistikasi uchun view yarating :
+    Ijara statistikasini, jumladan, har bir film uchun ijara soni
+    va har bir filmdan olingan umumiy daromadni taʼminlovchi viewni yarating.
+
+
+
+
+
+
+
+
+toifalarni ijara daromadi ko'rinishini yarating :
+    Har bir film toifasi uchun daromadni ko'rsatuvchi ijara
+    daromadini hisoblaydigan ko'rinishni ishlab chiqing.
+
+
+
+
+
+
+---------------- HOME WORK -------------------
+
+
+Mijoz ijarasi tarixi koʻrinishini yarating :
+    Har bir mijoz uchun ijara tarixi, jumladan,
+     ular ijaraga olgan filmlar nomlari va
+     ularning ijaraga olingan sanalarini koʻrsatadigan
+     koʻrinishni yarating.
+
+
+Film tavsiyalari koʻrinishini yarating :
+    Oʻtgan ijara tarixi va boshqa mijozlarning ijara
+    tarixi asosida har bir mijoz uchun tavsiya etilgan
+    filmlarni taklif qiladigan koʻrinishni yarating.
+
+Xodimlar faoliyatining ko'rinishini yarating :
+    Har bir xodim tomonidan qayta ishlangan ijara va
+    daromadlar sonini ko'rsatish orqali xodimlarning
+    ish faoliyatini baholaydigan ko'rinishni ishlab
+    chiqing.
+
+
+
+
+-----------------------------------------------------------------------------------
+
+DB/payments.txt
+    Kechiktirilgan toʻlovlar tahlili koʻrinishini yarating :
+
+        Kechiktirilgan toʻlovlar soni, tegishli
+        toʻlovlar boʻyicha statistik maʼlumotlarni koʻrsatuvchi
+        toʻlovlarni tahlil qiluvchi koʻrinishni yarating.
+
+
+

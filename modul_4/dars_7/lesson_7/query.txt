@@ -1,0 +1,199 @@
+-- -- AGGREGATE FUNCTIONS : sum , min , max , count , string_agg , array_agg
+--
+--
+-- -- select sum(p.amount) from payment p;
+-- -- select c.first_name || ' ' || c.last_name fullname , sum(p.amount) from payment p
+-- --     join customer c on c.customer_id = p.customer_id group by fullname having 90 < sum(p.amount);
+--
+-- --
+-- -- select a.first_name || ' ' || a.last_name as fullname , string_agg(f.title , ',')
+-- -- from actor a
+-- --     join film_actor fa using (actor_id)
+-- --     join film f on fa.film_id = f.film_id
+-- -- group by fullname;
+-- --
+-- -- select a.first_name || ' ' || a.last_name as fullname , array_agg(f.title) , count(f.film_id)
+-- -- from actor a
+-- --     join film_actor fa using (actor_id)
+-- --     join film f on fa.film_id = f.film_id
+-- -- group by fullname;
+--
+--
+-- --  SELECT MAX( length )
+-- --     FROM film
+-- --     INNER JOIN film_category USING(film_id)
+-- --     GROUP BY  category_id ;
+-- --
+-- -- show timezone ;
+-- -- set timezone = 'Asia/Tashkent';
+-- -- select current_time;
+-- --
+-- -- SELECT title, length
+-- -- FROM film
+-- -- WHERE length >= all(
+-- --     SELECT MAX( length )
+-- --     FROM film
+-- --     INNER JOIN film_category USING(film_id)
+-- --     GROUP BY  category_id );
+--
+--
+-- -- SELECT
+-- -- 	NULLIF ('B', 'A');
+--
+--
+--
+-- select c.first_name , a.address || ' ' || a.district address_ from customer c
+--     join address a on a.address_id = c.address_id
+--     where c.customer_id = (
+--         select c.customer_id from customer c
+--         join payment p2 on c.customer_id = p2.customer_id
+--         group by c.customer_id
+--         order by sum(p2.amount)
+--         desc limit 1
+--         )
+--     group by c.first_name, a.address || ' ' || a.district
+-- ;
+--
+--
+--
+--
+--
+--
+--
+--
+-- select c.customer_id , sum(p.amount) sum   from customer c
+-- join payment p on c.customer_id = p.customer_id
+-- group by c.customer_id
+-- order by sum desc ;
+--
+-- select * from customer where customer_id = 148;
+--
+-- select * from customer where first_name ilike 'marion%';
+
+-- subquery - select * from table_name where id in (select * from table_name2 where condition)
+
+
+
+-- select first_name
+-- from staff
+-- where address_id in (select address_id from address where district = 'QLD' and address = '1411 Lillydale Drive');
+--
+
+-- create table employees(
+--     id serial primary key ,
+--     fullname varchar(255),
+--     age integer,
+--     emp_joining_date integer
+-- );
+
+
+-- select * from actor
+-- where length(first_name) = (select max(length(first_name)) from actor a2);
+
+
+-- select * from employees
+-- where age > (select avg(age) from employees) and
+--       emp_joining_date = (select min(emp_joining_date) from employees)
+-- order by emp_joining_date , age desc limit 1;
+
+
+
+
+
+-- select * from employees where id = any(select count(emp_joining_date) from employees group by emp_joining_date);
+--
+-- select count(emp_joining_date) from employees group by emp_joining_date;
+
+
+select
+from actor a
+where exists(
+    select 1
+    from employees e
+    where e.fullname = a.first_name
+          );
+
+
+-- update employees set fullname = 'Botir' where id = 1;
+
+
+
+
+
+
+-- set timezone= 'Asia/Tashkent';
+-- set timezone= 'UTC';
+--
+-- select current_time;
+
+
+-- select first_name from actor
+-- UNION
+-- select fullname from employees;
+
+-- select (select count(actor_id) from actor) + (select count(id) from employees);
+
+
+
+
+-- select fullname from employees
+-- except
+-- select first_name from actor;
+
+
+-- select
+--        count(id) ,
+--        case
+--         when age > 21 and 25 >= age then 'Yosh xodim'
+--         when age > 25 and 30 >= age then 'Ortacha yoshli xodim'
+--         else 'qariya xodim'
+--         end as r
+-- from employees
+-- group by r
+-- order by count(id) desc
+-- limit 1;
+
+
+-- select coalesce(Null ,0);
+
+-- select coalesce(emp_joining_date, 2023) from employees;
+
+
+select nullif('10' , '11');
+
+
+select '1000'::int + '10'::int;
+
+
+select age::varchar from employees;
+
+select ascii('a');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

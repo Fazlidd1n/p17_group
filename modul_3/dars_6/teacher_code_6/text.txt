@@ -1,0 +1,137 @@
+
+# import asyncio
+# import time
+#
+#
+# async def fn():
+#     print('This is ')
+#     await asyncio.sleep(1)
+#     print('asynchronous programming')
+#     await asyncio.sleep(1)
+#     print('and not multi-threading')
+#
+# start = time.time()
+# asyncio.run(fn())
+# print(time.time() - start)
+
+==================================================
+
+# import asyncio
+#
+#
+# async def func1():
+#     print("Function 1 started..")
+#     await asyncio.sleep(2)
+#     print("Function 1 Ended")
+#
+#
+# async def func2():
+#     print("Function 2 started..")
+#     await asyncio.sleep(3)
+#     print("Function 2 Ended")
+#
+#
+# async def func3():
+#     print("Function 3 started..")
+#     await asyncio.sleep(1)
+#     print("Function 3 Ended")
+#
+#
+# async def main():
+#     L = await asyncio.gather(
+#         func1(),
+#         func2(),
+#         func3(),
+#     )
+#     print(L)
+#     print("Main Ended..")
+#
+#
+# asyncio.run(main())
+
+
+# ====================================================
+import asyncio
+import time
+#
+from asyncio import shield
+
+
+async def say_after(delay, what):
+    await asyncio.sleep(delay)
+    print(what)
+#
+# async def main():
+#     print(f"started at {time.strftime('%X')}")
+#
+#     task1 = asyncio.create_task(say_after(2, 'hello'))
+#     task2 = asyncio.create_task(say_after(4, 'world'))
+#     await task1
+#     await task2
+#
+#     print(f"finished at {time.strftime('%X')}")
+#
+# asyncio.run(main())
+
+====================================================================
+
+# import asyncio
+#
+# async def factorial(name, number):
+#     f = 1
+#     for i in range(2, number + 1):
+#         print(f"Task {name}: Compute factorial({number}), currently i={i}...")
+#         await asyncio.sleep(1)
+#         f *= i
+#     print(f"Task {name}: factorial({number}) = {f}")
+#     return f
+#
+# async def main():
+#     # Schedule three calls *concurrently*:
+#     L = await asyncio.gather(
+#         factorial("A", 2),
+#         factorial("B", 3),
+#         factorial("C", 4),
+#     )
+#     print(L)
+#
+# asyncio.run(main())
+
+======================================================================
+
+# import asyncio
+
+# async def async_task(number):
+#     print(f"Task {number} started")
+#     await asyncio.sleep(1)
+#     print(f"Task {number} completed")
+#
+# async def main():
+#     tasks = []
+#
+#     for i in range(1, 11):
+#         task = asyncio.create_task(async_task(i))
+#         tasks.append(task)
+#
+#     await asyncio.gather(*tasks)
+
+# if __name__ == "__main__":
+#     asyncio.run(main())
+
+
+# ===========================================
+# import asyncio
+
+
+# async def async_generator():
+#     for i in range(5):
+#         yield i
+#
+#
+# async def main():
+#     async for value in async_generator():
+#         print(f"Received value: {value}")
+#
+#
+# if __name__ == "__main__":
+#     asyncio.run(main())

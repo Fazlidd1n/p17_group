@@ -1,0 +1,46 @@
+1)
+    customer tabledan update qilingan malumotni sanasini customer_last_update ustini ga yangilab quyadigan
+    trigger yozing
+    customer tabledan delete qilingan malumotni customer_last_delete tablega barcha ustinlarini saqalab quyadigan
+    trigger yozing
+
+
+2)
+    actor table ga count_film ustuni qo'shilsin
+
+    id|  first_name| count_film
+    1 |  Botirjon  | 1
+
+
+    film_actor tablega qiymat qo'shilsa actor table dagi count_film ustini 1 ga oshiradigan trigger yarating
+
+    actor_id  |  film_id   |  last_update
+    1         |     18     |  2006-02-15 10:05:03.000000
+
+
+
+3)
+    check_account(username , password) - username , password malumotlarga to'gri keladigan
+    account bor bulsa True aks holda False qaytaradigan function yarating   PASSWORD - crypt function bilan
+    hashlangan saqlanadi!
+
+4)
+    staff jadvalidan password ustuni o'zgartirilsa changed_password table yaratib o'zgartiligan passowrd ni
+    tarixini saqlab ketadigan trigger yaratilsin
+
+
+
+
+
+5)
+    2 ta user yarating  : Admin , Sales
+    1 ta database
+
+    Admin : insert , delete , select , update - grant
+    Sales : insert , delete , update imtiyozlari revoke , grant - select
+
+
+6)
+    payment table dan delete qilingan malumotni payment_history tablega saqlab ketadigan qilinsin
+
+

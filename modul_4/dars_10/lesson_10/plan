@@ -1,0 +1,37 @@
+1. Triggers
+2. Crypto
+3. Privileges
+
+
+language + update
+
+
+update_language_log()
+
+    id | language_id | old_name | new_name | last_update
+
+
+update table_name set column_name = 'New name' where
+
+
+------------------------------------
+
+category + count_film column qo'shilsin default 0
+
+    1 | Action | 2006-02-15 09:46:27.000000 | 2
+
+
+
+film_category
+
+    f_id |  c_id  | date
+    1    |    1   | 2006-02-15 10:07:09.000000
+    10   |    1   | 2006-02-15 10:07:09.000000
+
+
+
+
+
+
+
+

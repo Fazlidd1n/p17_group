@@ -1,0 +1,2 @@
+1. Operators(Arithmetic, Comparison, Logic)
+2. PostgreSQL fundamentals (select distinct, order by, where, limit, fetch, in, between, like, is null, table and column aliases)

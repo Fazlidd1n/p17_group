@@ -1,0 +1,26 @@
+
+Leet_code:
+    https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/
+
+Theme:
+    In-built python Exception
+    Try/Except Block , Finally Block
+    Raise keyword
+    Assertions
+
+def test(*args) -> int:
+     return str()
+
+practice:
+    create self exception
+
+home work :
+    1) text file da open(file , "r") model ishlatilb ochganimizda file ichi bo'sh bo'lsa error tashidigan code yozing
+    2) password inputdan qabul qiling va belgi soni 4 ta dan kam bo'lsa , kichkina katta harflar eng kamida bitta qatnashmasa error tashidigan code yozing
+    3) va shu yuqoridagi 2 ta xattoliklar uchun try/except bilan yechimini ham yaratamiz
+    4) add_car(model , car_name , number , mileage) -> car.txt file ga saqlasin
+       search_car(number , model) degan function taratamiz ! agar file ichidan car topilmasa Exception tashaydigan qilamiz
+    5) library project ni check qismlarini try/except bilan optimal qilamiz
+
+
+

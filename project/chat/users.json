@@ -1,0 +1,29 @@
+[
+   {
+      "id": 1,
+      "fullname": "botirjon Qodirov",
+      "username": "botir_01",
+      "password": 1,
+      "messages": {
+         "john": [
+            {
+               "message": "Hello !",
+               "datetime": "2023-09-12 11:00",
+               "is_read": false
+            },
+            {
+               "message": "Hello !",
+               "datetime": "2023-09-12 11:00",
+               "is_read": false
+            }
+         ]
+      }
+   },
+   {
+      "id": 2,
+      "fullname": "Ismoilov Fazliddin",
+      "username": "f.ismoilovv",
+      "password": "7818",
+      "messages": {}
+   }
+]

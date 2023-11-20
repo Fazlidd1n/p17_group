@@ -1,0 +1,49 @@
+-- create table if not exists courses(
+--     id serial primary key ,
+--     name varchar(50) not null ,
+--     created_at date
+-- );
+--
+-- create table students(
+--     id serial primary key ,
+--     first_name varchar(100) not null ,
+--     last_name varchar(100) not null ,
+--     email varchar(100) check ( email like '%@%.com' ),
+--     course_id integer references courses(id),
+--     created_at date default timezone('Asia/Tashkent',current_date::timestamptz)
+-- );
+--
+-- alter table students add constraint students_email_check check ( email like '%@%');
+--
+
+
+select c.name, count(s.id) from courses c inner join students s on c.id = s.course_id group by c.name;
+
+select c.name, count(s.id) from courses c inner join students s on c.id = s.course_id where c.created_at > s.created_at group by c.name;
+
+select c.name, count(s.first_name) co from courses c inner join students s on c.id = s.course_id group by c.name order by co desc limit 2;
+
+select * from courses c full join students s on c.id = s.course_id where s.course_id is null;
+
+select * from courses c cross join students s;
+
+-- select c.name, s.first_name from courses c natural join students s order by c.id;
+
+
+
+
+
+create table A_table(
+    a varchar(50),
+    a_count integer
+);
+
+create table B_table(
+    b varchar(50),
+    b_count integer
+);
+
+insert into A_table(a, a_count) values ('a1',10);
+insert into B_table(b, b_count) values ('b1',10);
+
+select * from A_table union select * from B_table;

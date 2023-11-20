@@ -1,0 +1,20 @@
+select c.name, array_agg(f.title), count(f.film_id)
+from category c
+         join film_category fc on c.category_id = fc.category_id
+         join film f on f.film_id = fc.film_id
+group by c.name
+order by count(f.film_id);
+
+select c.first_name, sum(p.amount) sum
+from customer c
+         join payment p on c.customer_id = p.customer_id
+group by c.first_name
+order by sum desc
+limit 10;
+
+select c.first_name, a.district, sum(p.amount)
+from customer c
+         join payment p on c.customer_id = p.customer_id
+         join address a on a.address_id = c.address_id
+group by a.district, c.first_name
+order by sum(p.amount) desc limit 1;

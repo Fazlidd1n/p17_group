@@ -1,0 +1,108 @@
+Students and Courses
+
+student
+StudentID	FirstName	LastName
+
+
+courses
+CourseID	CourseName	Instructor
+
+
+student_course
+ID	StudentID	CourseID
+
+--------------------------------------------------------------------
+
+
+
+Authors and Books:
+
+authors
+AuthorID	FirstName	LastName
+
+
+books
+BookID	Title	PublicationYear
+
+
+author_book
+ID	AuthorID	BookID
+
+-------------------------------------------------------------
+
+
+
+
+Actors and Movies:
+
+actor
+ActorID	FirstName	LastName
+
+movies
+MovieID	Title	ReleaseYear
+
+actors_movies
+id	ActorID	MovieID
+
+
+-------------------------------------------------
+
+Products and Orders:
+
+
+
+
+Students and Clubs:
+
+
+
+
+Musicians and Bands:
+
+
+
+
+Doctors and Patients:
+
+
+
+
+Products and Categories:
+
+
+
+Teachers and Subjects:
+
+
+
+Employees and Projects many to many field
+
+
+
+
+
+Students and Tutors:
+
+
+
+
+Stores and Products:
+
+
+
+Authors and Genres:
+
+
+
+Events and Participants:
+
+
+
+Ingredients and Recipes:
+
+
+
+
+
+Airport Flights and Passengers:
+

@@ -1,0 +1,39 @@
+1)
+    input : a = "hello34453world534"
+    output : 10
+
+
+    input : a = "hello3world534"
+    output : 15
+
+Theme :
+
+    0. ord() , chr() , id() , hash()
+    1. tuple-set functions and methods
+    2. indexing
+    3. slicing
+    4. differences between them
+    5. loop on tuple and set
+    6. lambda functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

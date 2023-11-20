@@ -1,0 +1,16 @@
+create function search_top_course(num integer)
+returns table(course_id integer,course_name varchar, join_at date)
+language plpgsql
+as
+    $$
+    begin
+        return query
+        select c.* from students s
+        join students_courses sc on s.id = sc.student_id
+        join courses c on sc.id = c.id
+        group by c.id
+        order by count(sc.course_id) desc limit num;
+    end;
+    $$;
+
+select * from search_top_course(3);

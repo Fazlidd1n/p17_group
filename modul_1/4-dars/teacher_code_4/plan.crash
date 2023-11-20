@@ -1,0 +1,56 @@
+
+
+Theme :
+    random
+    math -> sqrt , log , log10 , cos , sin , tan , ctag
+    functions
+
+
+
+
+practical work :
+
+    check_file(file_name)
+    user_info(fullname , age , address)
+    add_users()
+    register_login menu
+
+
+HOME WORK :
+    1) calculator:
+        add()
+        subtract()
+        multiple()
+        division()
+
+    2) random_num(min_sum , max_sum)
+    2) rect_perimeter()                 to'rtburchak peremtri
+    3) triangle_area()                  uchburchakning yuzi
+    4) sphere_area()                    sharning yuzi
+    5) sphere_size()                    sharning hajmi
+    3) text_correction(text)            example : "hello .        botirjon" -> "Salom . Botirjon"
+    4) Leetcode string :                limit 5 ta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

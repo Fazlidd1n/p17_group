@@ -1,0 +1,26 @@
+create table users(
+    id serial primary key ,
+    fullname varchar(255),
+    phone_number varchar(255) default '+998-95-010-78-18'
+);
+create table products(
+    id serial primary key ,
+    name varchar(255),
+    expire_date date default current_date
+);
+create table orders(
+    id serial primary key ,
+    name varchar(255),
+    price integer,
+    count_product integer
+);
+
+insert into users(fullname)
+select md5(generate_series::varchar) from generate_series(1,100000);
+
+insert into products(name)
+select md5(generate_series::varchar) from generate_series(1,1000000);
+
+insert into orders(name, price, count_product)
+select md5(generate_series::varchar),generate_series,generate_series
+from generate_series(1,500000);

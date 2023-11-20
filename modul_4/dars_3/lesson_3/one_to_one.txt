@@ -1,0 +1,69 @@
+Members(member_id , name , address) <-> BorrowingPrivileges(borrowing_id , member_id , borrowing_limit , due_date)
+
+
+--------------------------------------------------------------
+Employee and EmployeeID: In a company database, each employee has a unique employee ID, forming a one-to-one relationship.
+
+EmployeeID (Primary Key)
+FirstName
+LastName
+DateOfBirth
+
+EmployeeID (Primary Key and also a Foreign Key referencing Employee)
+Position
+HireDate
+Salary
+---------------------------------------------------------------
+
+Passport and Person: Each person typically has one passport, creating a one-to-one relationship between people and their passports.
+
+PersonID (Primary Key)
+FirstName
+LastName
+DateOfBirth
+
+personID (Primary Key) reference
+serias (length 2) AA , AB , BB , AC , AD , CC , DD
+PassportNumber (length 7)
+ExpirationDate
+IssuingCountry
+unique(serias , PassportNumber)
+
+----------------------------------------------------------------
+
+Student and StudentID: In an educational database, each student is assigned a unique student ID, establishing a one-to-one relationship.
+
+StudentID (Primary Key)
+FirstName
+LastName
+DateOfBirth
+
+StudentID (Primary Key and also a Foreign Key referencing Student)
+EnrollmentDate
+GradeLevel
+ContactInformation
+
+-----------------------------------------------------------------------
+
+
+Customer and CustomerID: In a customer database, each customer is associated with a unique customer ID, forming a one-to-one relationship.
+
+CustomerID
+FirstName
+LastName
+Email
+
+CustomerID
+UniqueIdentifier
+-----------------------------------------------------------------------
+
+
+User and User Profile: In a web application, each user typically has a single user profile, creating a one-to-one relationship.
+
+Patient and Medical Record: Each patient usually has one medical record, establishing a one-to-one relationship in healthcare systems.
+
+Product and Serial Number: Each product is often identified by a unique serial number, representing a one-to-one relationship.
+
+Animal and Microchip ID: In animal tracking systems, each animal is tagged with a unique microchip ID, forming a one-to-one relationship.
+
+Apartment and Lease Agreement:

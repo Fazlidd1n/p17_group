@@ -1,0 +1,32 @@
+
+
+Subquery :
+    staff table dan o'rtacha oylikdan kam oladigan hodimlarni hamma ustunlarini chiqaring
+
+EXISTS :
+    dvdrental(customer , payment) summasi 11 dan kup bo'lgan kamida bitta to'lovga ega bo'lgan mijozlarni toping
+
+set:
+    current_time ni germany davlati timezone siga o'zgartiring
+
+Intersect:
+    (most_popular_films , top_rated_films): ikkalasida ham mavjud bugan filmlarni toping
+
+Except:
+     (most_popular_films , top_rated_films): faqat mashxur filmga tegishlilar  chiqarilsin
+
+case:
+    (employees) : 1 yil dan kam staji bor hodimlarni 'Probation' ,
+                  1 yil va 3 yil oralig'da staji borlarni 'Contract'
+                  3 yildan kup staji borlarni 'Permanent'    -  o'sish tartibida chiqaring
+
+coalesce:
+    (customers) : fullname | total_amount - purchase_price |  -   shu xolatni chiqarish kerak (purchase_price in Null bo'lishi mumkin)
+
+
+type cast:
+     type casting
+    '2000-12-45' date
+    '10' integer
+
+

@@ -1,0 +1,102 @@
+1)
+
+
+MAVZU :
+    1. Dasturlash tili sintaksisi
+    2. Berilganlar turlari
+    3. Butun sonlar
+    4. Haqiqiy sonlar
+    5. Complex sonlar
+    6. list, tuple, set va dictionary
+
+
+    1. Arithmetic operators
+    2. Relational operators
+    3. Bitwise operators
+    4. Assigning operators
+    5. Logical operators
+
+
+    1) if elif else
+
+
+
+
+
+amaliy qilinadigan ish :
+    1) kiritilgan son juft yo toq sonligini aniqlidigan dastur
+            1)masalan:
+                input: 5
+                output : toq
+
+                input : 8
+                output : juft
+
+    2) calculator
+
+
+
+HOME WORK read:
+
+
+    1) x , y butun sonlar inputdan kiritilsin ! Ularni string ko'rinishida birlashtirilsin
+        masalan:
+            input: 3 4
+            output : 34
+
+
+    2) x ikilik sanoq sistemasida (10110101) qiymat input dan kiritilsin va kiritilgan qiymat butun songa aylantirilsin
+        masalan:
+            input: 10011
+            output : 19
+
+    3) x butun son input dan kiritilsin va kiritilgan qiymat ikilik sanoq sistemasiga (10110101) aylantirilsin
+        masalan:
+            input: 19
+            output : 10011
+
+    4) x ixtiyoriy son kiritilsin (float , int) va ular qaysi typega tegishli ekanligi topilsin
+        masalan:
+            input: 13.8
+            output: float
+
+
+            input: 27
+            output: int
+
+    5) x , y butun son qabul qilinsin ! maximal son birinchi qatorda chop etilsin
+        masalan:
+            input: 9 10
+            output: 10 9
+
+
+            input: 20 4
+            output: 20 4
+
+
+    6) x , y butun son qabul qilinsin ! minimum son topilsin va yarim qiymati float type da chop etilsin
+        masalan:
+            input: 9 10
+            output: 4.5 10
+
+
+            input: 20 4
+            output: 20.0 2.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

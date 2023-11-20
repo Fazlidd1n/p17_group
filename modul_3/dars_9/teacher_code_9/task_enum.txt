@@ -1,0 +1,12 @@
+DayOfWeek
+UserRole
+Color
+PizzaSize
+HTTPStatus
+Gender
+Coin
+FileType
+PaymentMethod
+Language
+MusicGenre
+ComputerComponent

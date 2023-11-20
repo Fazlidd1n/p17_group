@@ -1,0 +1,28 @@
+1)
+
+urls = [
+        'https://www.example.com',
+        'https://www.google.com',
+        'https://www.github.com'
+    ]
+    shu saitlarga request yuboradigan async function yarating va qaytgan qiymatni len() topib print qilib quying
+
+
+2)
+
+
+    https://jsonplaceholder.typicode.com/
+    shu saitda 6 ta datalarni olib txt file ga saqlovchi async function yarating
+
+
+3)
+
+factorial() function async qilib yarating
+
+4)
+
+File class yarating
+write , read methodlarini async qilib yarating
+
+
+

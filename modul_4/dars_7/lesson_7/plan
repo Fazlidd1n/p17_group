@@ -1,0 +1,48 @@
+1. Subquery, ANY, ALL, EXISTS, Set
+2. Operations (UNION, Intersect, Except)
+3. CONDITIONAL EXPRESSIONS & OPERATORS (case, coalesce, nullif,type cast)
+
+
+fullname | total_amount - coalesce(purchase_price,0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

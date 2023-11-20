@@ -1,0 +1,2 @@
+constraints - not null , null , unique , pk , fk , check
+DML - insert , select , update , delete

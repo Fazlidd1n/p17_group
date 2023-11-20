@@ -1,0 +1,60 @@
+class :
+    Student(student_id : int , first_name : str , last_name: str , courses : list)
+        def : add_course , drop_course , get_courses , get_full_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class :
+    Car(company: str, model: str, year: int , is_running:bool)
+        def : start , stop , is_running , get_info
+
+
+
+
+
+
+
+
+
+
+
+class :
+    Employee(emp_id: int, first_name: str, last_name: str, salary: int)
+        def : get_emp_id , get_full_name , get_salary , set_salary
+
+    Company(name: str , employees : list[Employee])
+        def : hire_employee , fire_employee , list_employees
+
+class :
+    Book(title, author , is_borrowed = False)
+        def : get_title , get_author , borrow , return_book
+
+    Library(name , books: list)
+        def : add_book , remove_book , list_books
+
+
+class :
+    ShoppingCart(items: dict)
+        def : add_item , remove_item , view_cart
+
+
+class :
+    SocialMediaProfile(username, email , posts: list)
+        def : create_post , delete_post , view_posts
+
+
+
+
+

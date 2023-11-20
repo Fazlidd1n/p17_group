@@ -1,0 +1,19 @@
+create index indx_course_name on courses(name);
+alter table students add column course_count integer default 0;
+
+create function update_student_course()
+returns trigger
+language plpgsql
+as
+    $$
+    begin
+        update students set course_count = old.course_count + 1 where id = old.id;
+        return new;
+    end;
+    $$;
+
+create trigger student_course_count
+    after insert
+    on students_courses
+    for each row
+    execute function update_student_course();

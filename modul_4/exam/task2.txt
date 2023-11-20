@@ -1,0 +1,16 @@
+create function show_name(start_str varchar)
+returns table(first_name varchar, last_name varchar)
+language plpgsql
+as
+    $$
+    begin
+        return query
+        select a.first_name, a.last_name from actor a
+            where a.first_name ilike start_str or a.last_name ilike start_str;
+    end;
+    $$;
+
+drop function show_name;
+
+select * from show_name('%Pe');
+

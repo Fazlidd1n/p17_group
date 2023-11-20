@@ -1,0 +1,64 @@
+1 - variant !
+
+
+# N1
+word1 = ["ab", "c"]
+word2 = ["a", "bc"]
+if "".join(word1) == "".join(word2):
+    print(True)
+else:
+    print(False)
+
+
+# N3
+nums = input("nums :").split()
+target = int(input("target = "))
+s = []
+for i in range(len(nums) - 1):
+    if int(nums[i]) + int(nums[i + 1]) == target:
+        s.append(i)
+        s.append(i + 1)
+        break
+print(s)
+
+
+
+# N4
+names = ["Mary", "John", "Emma"]
+heights = [180, 165, 170]
+s = []
+s2 = []
+for i in range(len(names)):
+    s.append([names[i], heights[i]])
+sorted(s, key=lambda x: x[-1], reverse=True)
+for i in s:
+    s2.append(i[0])
+print(s2)
+
+
+
+
+# N5
+mat = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+matrix = []
+x1 = []
+x2 = []
+x3 = []
+for i in range(len(mat)):
+    for j in range(len(mat[i])):
+        if j == 0:
+            x1.append(mat[i][j])
+        if j == 1:
+            x2.append(mat[i][j])
+        if j == 2:
+            x3.append(mat[i][j])
+matrix.append(x1)
+matrix.append(x2)
+matrix.append(x3)
+
+for i in matrix:
+    print(i)
